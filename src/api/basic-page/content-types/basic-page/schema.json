@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "basic_pages",
+  "info": {
+    "singularName": "basic-page",
+    "pluralName": "basic-pages",
+    "displayName": "Basic Pages"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "uid"
+    }
+  }
+}
