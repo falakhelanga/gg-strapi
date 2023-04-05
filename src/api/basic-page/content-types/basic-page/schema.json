@@ -4,7 +4,8 @@
   "info": {
     "singularName": "basic-page",
     "pluralName": "basic-pages",
-    "displayName": "Basic Pages"
+    "displayName": "Basic Pages",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,11 @@
   "attributes": {
     "name": {
       "type": "uid"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.hero"
     }
   }
 }
