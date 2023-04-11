@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "images": {
+    "desktopImages": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -17,18 +17,20 @@
         "audios"
       ]
     },
-    "buttonText": {
-      "type": "string"
-    },
-    "buttonColor": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::color.color"
-    },
     "button": {
       "type": "component",
       "repeatable": false,
       "component": "layout.button"
+    },
+    "mobileImages": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

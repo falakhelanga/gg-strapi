@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "button_variants",
+  "info": {
+    "singularName": "button-variant",
+    "pluralName": "button-variants",
+    "displayName": "Button Variants"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "variant": {
+      "type": "string"
+    }
+  }
+}

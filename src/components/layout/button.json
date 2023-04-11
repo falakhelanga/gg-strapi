@@ -1,20 +1,21 @@
 {
   "collectionName": "components_layout_buttons",
   "info": {
-    "displayName": "button"
+    "displayName": "button",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
       "type": "string"
     },
-    "color": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::color.color"
-    },
     "link": {
       "type": "string"
+    },
+    "button_variant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::button-variant.button-variant"
     }
   }
 }

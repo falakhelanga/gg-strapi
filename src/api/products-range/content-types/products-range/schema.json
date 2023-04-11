@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "products_ranges",
+  "info": {
+    "singularName": "products-range",
+    "pluralName": "products-ranges",
+    "displayName": "products-range",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "component",
+      "repeatable": false,
+      "component": "products.products"
+    }
+  }
+}

@@ -15,10 +15,13 @@
     "name": {
       "type": "uid"
     },
-    "hero": {
-      "type": "component",
-      "repeatable": false,
-      "component": "layout.hero"
+    "pageContentDynamicZone": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.button",
+        "layout.hero",
+        "products.products"
+      ]
     }
   }
 }

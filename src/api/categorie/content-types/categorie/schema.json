@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "colors",
+  "collectionName": "categories",
   "info": {
-    "singularName": "color",
-    "pluralName": "colors",
-    "displayName": "colors",
-    "description": ""
+    "singularName": "categorie",
+    "pluralName": "categories",
+    "displayName": "categories"
   },
   "options": {
     "draftAndPublish": true
@@ -15,8 +14,8 @@
     "name": {
       "type": "string"
     },
-    "value": {
-      "type": "string"
+    "description": {
+      "type": "richtext"
     }
   }
 }
