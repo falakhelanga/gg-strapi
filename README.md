@@ -1,8 +1,20 @@
 1. Create docker-compose.yml
-1. Create Dockerfile
+1. Create Dockerfile.prod
 1. Create .dockerignore
 1. Create .gitignore
 1. Create .env
+
+### Docker Compose
+
+In the port number, it needs to be an available port on the server. 
+You will be able to see the port number in Portainer.
+
+Eg. 
+```
+ports: 
+- 1343:1337
+```
+
 
 ## Environment Variables
 
@@ -99,6 +111,16 @@ On the server:
   wormhole receive PASSPHRASE
 ```
 
+### Build the docker image
+
+#### Building for multiple platforms (Required if building from ARM)
+`docker buildx create --name linuxbuilder`
+`docker buildx use linuxbuilder`
+`docker buildx inspect --bootstrap`
+
+Building docker image and pushing to the repo:
+`docker buildx build --build-arg NODE_ENV=production -t USERNAME/IMAGENAME:latest -f Dockerfile.prod --platform linux/amd64 . --push`
+
 ### Deploy alias for easy image deployment 
 
 `deploy`:`alias deploy="sudo docker-compose pull && sudo docker-compose up -d"`
@@ -109,3 +131,4 @@ On the server:
 https://bb1.hosting.bigbrave.digital/#!/auth
 
 
+docker buildx build --build-arg NODE_ENV=production -t trystanbb/gynaguard-strapi:latest -f Dockerfile.prod --platform linux/amd64 . --push
