@@ -121,14 +121,41 @@ On the server:
 Building docker image and pushing to the repo:
 `docker buildx build --build-arg NODE_ENV=production -t USERNAME/IMAGENAME:latest -f Dockerfile.prod --platform linux/amd64 . --push`
 
+
+#### On the server, deploy the image
+
 ### Deploy alias for easy image deployment 
 
 `deploy`:`alias deploy="sudo docker-compose pull && sudo docker-compose up -d"`
 
 
+### Get Docker logs of running container
+
+`sudo docker logs -f CONTAINER_ID`
+
+
+# Caddy
+
+### Setting up the reverse proxy for Caddy
+
+Edit the caddy file:
+
+```bash
+  sudo nano /etc/caddy/Caddyfile
+```
+Reload Caddy:
+  
+```bash
+  sudo systemctl reload caddy
+```
+
+View caddy status:
+
+```bash
+sudo systemctl status caddy
+```
+
 # Portainer
 
 https://bb1.hosting.bigbrave.digital/#!/auth
 
-
-docker buildx build --build-arg NODE_ENV=production -t trystanbb/gynaguard-strapi:latest -f Dockerfile.prod --platform linux/amd64 . --push
