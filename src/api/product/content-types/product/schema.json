@@ -54,6 +54,10 @@
       "relation": "manyToMany",
       "target": "api::subcategory.subcategory",
       "mappedBy": "products"
+    },
+    "isNew": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
