@@ -4,18 +4,25 @@
   "info": {
     "singularName": "subcategory",
     "pluralName": "subcategories",
-    "displayName": "subcategories"
+    "displayName": "subcategories",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::product.product",
       "inversedBy": "subcategories"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
     }
   }
 }
